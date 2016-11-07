@@ -16,5 +16,14 @@
         <item>Query 6</item>
         <item>Query 7</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="checkout_btn">Check Out</string>
+    <string name="return_btn">Return</string>
+    <string name="Summary">summary_btn</string>
+    <string name="summary_btn">Summary</string>
+    <string name="studentID">Student ID</string>
+    <string name="bookID">Book ID</string>
+    <string name="date">Date</string>
+    <string name="title_checkout"><![CDATA[Check Out & Return]]></string>
 
 </resources>
