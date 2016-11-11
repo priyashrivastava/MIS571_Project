@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="checkoutlist_btn" type="id">Show Checkout List</item>
+    <item name="checkoutlist_btn9" type="id">Checkout List</item>
+</resources>

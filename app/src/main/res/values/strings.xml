@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Library_PriyaS</string>
+    <string name="app_name">Library_shalinitallamlaxman</string>
     <string name="Welcome">Welcome to PriyaShrivastava Library!</string>
     <string name="goCheckOut_btn">Check Out</string>
     <string name="goDoQuery_btn">Do Query</string>
@@ -25,5 +25,11 @@
     <string name="bookID">Book ID</string>
     <string name="date">Date</string>
     <string name="title_checkout"><![CDATA[Check Out & Return]]></string>
+    <string name="ShowCheckoutList">checkoutlist_btn</string>
+    <string name="stname">Name</string>
+    <string name="coduedate">Due Date</string>
+    <string name="lbtitle">Book Title</string>
+    <string name="title_checkoutlist">Check Out Record</string>
+    <string name="checkoutlist_btn">Show Checkout List</string>
 
 </resources>

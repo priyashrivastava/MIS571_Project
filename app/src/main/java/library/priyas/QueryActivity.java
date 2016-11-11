@@ -1,12 +1,12 @@
 package library.priyas;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import library.priyas.constant.SQLCommand;
 import library.priyas.util.DBOperator;
 import library.priyas.view.TableView;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,19 +14,9 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-//public class QueryActivity extends AppCompatActivity {
-    /** Called when the activity is first created. */
-   // @Override
-   // public void onCreate(Bundle savedInstanceState) {
-   //     super.onCreate(savedInstanceState);
-   //     setContentView(R.layout.query_priya_s_layout);
-   // }
-//}
+public class QueryActivity extends AppCompatActivity implements OnClickListener {
 
-
-    public class QueryActivity extends AppCompatActivity implements OnClickListener {
-
-    Button backBtn,resultBtn;
+    Button backBtn,resultBtn,showlistBtn;
     Spinner querySpinner;
     ScrollView scrollView;
 
@@ -41,6 +31,8 @@ import android.widget.Toast;
         }
         backBtn=(Button)this.findViewById(R.id.goBack_btn);
         backBtn.setOnClickListener(this);
+        showlistBtn=(Button)this.findViewById(R.id.showcheckoutlist_btn);
+        showlistBtn.setOnClickListener(this);
         resultBtn=(Button)this.findViewById(R.id.showResult_btn);
         resultBtn.setOnClickListener(this);
         querySpinner=(Spinner)this.findViewById(R.id.querylist_spinner);
@@ -77,12 +69,24 @@ import android.widget.Toast;
             }else if (pos==6){
                 sql=SQLCommand.QUERY_7;
             }
+
             Cursor cursor=DBOperator.getInstance().execQuery(sql);
             scrollView.addView(new TableView(this.getBaseContext(),cursor));
-        }else if (id==R.id.goBack_btn){
+        }
+        else if (id==R.id.goBack_btn){
             //go back to main screen
             Intent intent = new Intent(this, PriyaSActivity.class);
             this.startActivity(intent);
         }
+        else if (id == R.id.showcheckoutlist_btn) {
+            // show checkout list result
+
+            sql = SQLCommand.CHECKOUT_LIST;
+            Intent intent = new Intent(getApplicationContext(),
+                    ShowlistActivity.class);
+            intent.putExtra("sql", sql);
+            startActivity(intent);
+        }
+
     }
 }

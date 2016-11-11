@@ -43,12 +43,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />-->
     </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/checkoutlist_btn"
+        android:id="@+id/showcheckoutlist_btn"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false" />
+
 
     <Button
         android:text="@string/goBack_btn"
-        android:layout_width="wrap_content"
         android:id="@+id/goBack_btn"
         android:layout_gravity="center_horizontal"
         android:textAllCaps="false"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:layout_width="200dp" />
+
 </LinearLayout>
